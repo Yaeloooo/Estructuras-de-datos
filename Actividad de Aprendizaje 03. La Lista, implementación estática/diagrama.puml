@@ -1,0 +1,57 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Song {
+    - name: std::string
+    - author: std::string
+    - interpreter: std::string
+    - top: int
+
+    + Song()
+    + Song(name: std::string, author: std::string, interpreter: std::string, top: int)
+    + Song(other: const Song&)
+    + operator=(other: const Song&): Song&
+
+    + getName(): std::string
+    + getAuthor(): std::string
+    + getInterpreter(): std::string
+    + getTop(): int
+
+    + toString(): std::string
+
+    + setName(name: const std::string&): std::string
+    + setAuthor(author: const std::string&): std::string
+    + setInterpreter(interpreter: const std::string&): std::string
+    + setTop(top: const int&): int
+
+    {static} + operator<<(os: std::ostream&, song: const Song&): std::ostream&
+    {static} + operator>>(is: std::istream&, song: Song&): std::istream&
+}
+
+class list {
+    - name: std::string
+    - author: std::string
+    - interpreter: std::string
+    - top: int
+
+    + Song()
+    + Song(name: std::string, author: std::string, interpreter: std::string, top: int)
+    + Song(other: const Song&)
+    + operator=(other: const Song&): Song&
+
+    + getName(): std::string
+    + getAuthor(): std::string
+    + getInterpreter(): std::string
+    + getTop(): int
+
+    + toString(): std::string
+
+    + setName(name: const std::string&): std::string
+    + setAuthor(author: const std::string&): std::string
+    + setInterpreter(interpreter: const std::string&): std::string
+    + setTop(top: const int&): int
+
+    {static} + operator<<(os: std::ostream&, song: const Song&): std::ostream&
+    {static} + operator>>(is: std::istream&, song: Song&): std::istream&
+}
+@enduml
